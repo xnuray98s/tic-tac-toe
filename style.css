@@ -80,3 +80,19 @@ h1{
     border-radius: 10px;
     box-shadow:  1px 1px 0px  #949494a3;
 }
+@media (min-width:320px){
+    h1{
+        font-size: 30px;
+    }
+    #submit{
+        left: 45%;
+    }   
+    .cell{
+        width: 100px;
+        height: 110px;
+    }
+    #scores{
+        grid-template-columns: 1fr 2fr;
+        margin-left: 10%;
+    }
+}
