@@ -32,6 +32,7 @@ h1{
 #tie-message p{
     font-size: 20px;
     margin-left: 26%;
+    transform: translate(0%,-100%);
 }
 .cell{
     border: 2px solid #4a7ebd;
@@ -39,14 +40,14 @@ h1{
     height: 7vw;
     font-size: 5vw;
     text-align: center;
-    
+
 }
 #scoreboard{
     display: grid;
     position: fixed;
     grid-template-rows: 1fr 1fr;
     column-gap: 100px;
-    top: 25%;
+    top: 22%;
     left: 50%;
     transform: translate(-30%,-50%);
     width: 600px;
@@ -54,7 +55,7 @@ h1{
 #next{
     width: 100px;
     position: fixed;
-    top: 100%;
+    top: 75%;
     left: 30%;
     transform: translate(-50%,-1%);
     background-color: #f3f3f3;
