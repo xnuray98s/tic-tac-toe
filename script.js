@@ -85,7 +85,7 @@ function updateScoreboard(won){
 function gameOver(won) {
   for (let index of winningCombos[won.index]) {
     document.getElementById(index).style.backgroundColor =
-    won.player == human ? "yellow" : "green"; 
+    won.player == human ? "lightgreen" : "lightcoral"; 
   }
   for (let index = 0; index < cells.length; index++) {
     cells[index].removeEventListener('click', huClick, false);
@@ -113,7 +113,7 @@ function checkTie() {
   if (emptyDiv().length == 0 && aiWon == null && humanWon == null) {
     for (let index = 0; index < cells.length; index++) {
       cells[index].removeEventListener('click', huClick, false);
-      cells[index].style.backgroundColor = 'red';
+      cells[index].style.backgroundColor = 'lightblue';
     }
     document.getElementById("next").style.display = "block";
     tieMessage();

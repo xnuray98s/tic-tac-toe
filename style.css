@@ -1,5 +1,5 @@
-*{
-    background-color: #ffffff;
+body{
+    background-color: #ece3e4;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     color: #4B4B4B;
@@ -13,6 +13,22 @@ header{
 }
 h1{
     font-size: 40px;
+}
+#right-img{
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+}
+#left-img{
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    width: 250px;
 }
 #scores{
     display: grid;
@@ -35,7 +51,7 @@ h1{
     transform: translate(0%,-100%);
 }
 .cell{
-    border: 2px solid #4a7ebd;
+    border: 2px solid #AD9427;
     width: 7vw;
     height: 7vw;
     font-size: 5vw;
@@ -58,7 +74,7 @@ h1{
     top: 75%;
     left: 30%;
     transform: translate(-50%,-1%);
-    background-color: #f3f3f3;
+    background-color: #AD9427;
     border-radius: 10px;
     box-shadow:  1px 1px 0px  #949494a3;
 }
@@ -66,25 +82,28 @@ h1{
     position: fixed;
     top: 35%;
     left: 50%;
+    padding: 5px;
     transform: translate(-10%,-50%);
-    background-color: hsl(0, 0%, 95%);
+    background-color: #AD9427;
+    color: white;
     border-radius: 10px;
-    box-shadow:  1px 1px 0px  #949494a3;
+    
 }
-@media (min-width:320px){
+@media screen and (max-width: 600px){
     h1{
         position: fixed;
         top: 0%;
         width: 200px;
-        transform: translate(-50%,-80%);
+        transform: translate(-50%,-50%);
         text-align: center;
         font-size: 30px;
     }
     #submit{
-        left: 45%;
+        left: 10%;
+        top: 80%;
     }
     #scoreboard{
-        transform: translate(-29%,-20%);
+        transform: translate(-1%,-5%);
     }   
     .cell{
         width: 100px;
@@ -93,7 +112,23 @@ h1{
         text-align: center;
     }
     #scores{
-        grid-template-columns: 1fr 2fr;
-        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+    }
+    #right-img{
+        display: none;
+    }
+    #left-img{
+        width: 200px;
+        position: fixed;
+        top: 20%;
+        left: 20%;
+    }
+    #next{
+        left: 10%;
+    }
+    #tie-message p{
+        margin-left: 5%;
+        margin-top: 30px;
     }
 }
